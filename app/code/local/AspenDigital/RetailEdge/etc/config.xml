@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<AspenDigital_RetailEdge>
+			<version>1.0</version>
+		</AspenDigital_RetailEdge>
+	</modules>
+
+	<global>
+		<models>
+			<retailedge>
+				<class>AspenDigital_RetailEdge_Model</class>
+				<resourceModel>retailedge_resource</resourceModel>
+			</retailedge>
+			<retailedge_resource>
+				<class>AspenDigital_RetailEdge_Model_Mysql4</class>
+				<entities>
+					<category_map><table>retailedge_category_map</table></category_map>
+					<cron_info><table>retailedge_cron_info</table></cron_info>
+				</entities>
+			</retailedge_resource>
+		</models>
+		<helpers>
+            <retailedge>
+                <class>AspenDigital_RetailEdge_Helper</class>
+            </retailedge>
+        </helpers>
+		<blocks>
+            <retailedge>
+				<class>AspenDigital_RetailEdge_Block</class>
+			</retailedge>
+        </blocks>
+		
+		<resources>
+			<retailedge_setup>
+				<setup>
+					<module>AspenDigital_RetailEdge</module>
+					<class>Mage_Eav_Model_Entity_Setup</class>
+				</setup>
+			</retailedge_setup>
+		</resources>
+	</global>
+
+	<admin>
+        <routers>
+            <retailedge>
+                <use>admin</use>
+                <args>
+                    <module>AspenDigital_RetailEdge</module>
+                    <frontName>retailedge</frontName>
+                </args>
+            </retailedge>
+        </routers>
+    </admin>
+
+	<default>
+		<retailedge>
+			<api>
+				<verify_ssl>1</verify_ssl>
+				<db_name>RetailEdgeData</db_name>
+			</api>
+		</retailedge>
+	</default>
+
+ </config>

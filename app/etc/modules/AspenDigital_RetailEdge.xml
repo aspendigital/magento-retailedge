@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <AspenDigital_RetailEdge>
+      <codePool>local</codePool>
+      <active>true</active>
+	  <depends>
+		<AspenDigital_CommonImport/>
+		<Mage_Dataflow/>
+		<Mage_Eav/>
+	  </depends>
+    </AspenDigital_RetailEdge>
+  </modules>
+</config>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<config>
+
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<retailedge translate="title" module="retailedge">
+										<title>RetailEdge Settings</title>
+									</retailedge>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+
+</config>
